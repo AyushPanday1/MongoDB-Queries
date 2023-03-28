@@ -109,6 +109,7 @@ db.model.find({ rupees: { $lte: 250 } });
 db.model.find({ age: { $lte: 40 } });
 
 
+db.model.find({ name: "Ayush", age: { $gte: 19, $lte: 23 } });
 
 
 //skip and limit
@@ -174,6 +175,12 @@ db.model.updateOne({ _id: id }, { $inc: { price: 250 } });
 db.model.updateOne({ _id: id }, { $inc: { price: -100 } })
 
 db.model.updateOne({ _id: id }, { $rename: { enam: "name" } });
+
+//pull and push
+
+db.model.updateOne({ _id: id }, { $push: { language: "python" } });
+
+db.model.updateOne({ _id: id }, { $pull: { language: "java" } });
 
 
 {/*NOTE: Use upsert when if there is no object matching then it will create that object in db*/ }
