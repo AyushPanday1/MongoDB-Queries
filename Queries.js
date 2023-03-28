@@ -154,7 +154,7 @@ db.model.findById({ _id: id })
 
 db.model.findOneAndUpdate({ book: "CODE" }, { $inc: { price: 150 } })
 
-db.findOneAndDelete({ product: "Pen" })
+db.model.findOneAndDelete({ product: "Pen" })
 
 db.model.findOneAndReplace({ age: 17 }, { name: "Mihir", age: 17 })
 
