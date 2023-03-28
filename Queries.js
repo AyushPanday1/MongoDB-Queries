@@ -148,6 +148,7 @@ db.model.findOne({ $and: [{ name: "Queries" }, { data: "MongoDB" }] });
 
 db.model.findOne({ _id: id })
 
+db.model.findById({ _id: id })
 
 /**FINDONEANDUPDATE , FINDONEANDDELETE and FINDONEANDREPLACE */
 
@@ -216,4 +217,4 @@ db.model.deleteMany({ price: { $gt: 300 } });
 db.model.deleteMany({ title: "Games" });
 
 
-{/*THANK-YOU*/}
+{/*THANK-YOU*/ }
